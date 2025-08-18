@@ -264,7 +264,7 @@ function HeartIcon() {
   );
 }
 
-/* ============================== INNOVATION (improved content) ============================== */
+/* ============================== INNOVATION ============================== */
 
 function Innovation() {
   return (
@@ -407,7 +407,6 @@ function PrincipleCard({
         {icon}
       </div>
       <div className="mt-4 text-lg font-semibold text-white">{title}</div>
-      {/* Full text always visible */}
       <p className="mt-2 text-sm text-gray-200 leading-relaxed">{desc}</p>
     </div>
   );
@@ -457,7 +456,7 @@ function SparkIcon() {
   );
 }
 
-/* ============================== WHAT'S NEXT (final alignment fix) ============================== */
+/* ============================== WHAT'S NEXT (timeline) ============================== */
 
 function WhatsNext() {
   return (
@@ -465,9 +464,7 @@ function WhatsNext() {
       <div className="max-w-5xl mx-auto px-6">
         <SectionHeading kicker="What’s next">Early milestones</SectionHeading>
 
-        {/* Pad left once; both the line and dots will align to this same padded edge */}
         <div className="relative pl-8 mt-6">
-          {/* One continuous vertical line exactly on the padded edge */}
           <div className="pointer-events-none absolute left-0 inset-y-0 w-px bg-sky-500/80" />
 
           <TimelineItem year="2025">
@@ -488,8 +485,6 @@ function WhatsNext() {
   );
 }
 
-/* --- Each item positions its dot on the exact same left-0 as the line --- */
-
 function TimelineItem({
   year,
   children,
@@ -499,7 +494,6 @@ function TimelineItem({
 }) {
   return (
     <div className="relative py-3">
-      {/* Dot centered directly ON the line */}
       <span className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-sky-500 border-2 border-white" />
       <p className="ml-8">
         <span className="font-semibold text-sky-500">{year}:</span> {children}
@@ -521,13 +515,26 @@ function JoinUs() {
           This is the beginning. We invite governments, funders, clinicians, advocates, and innovators to add their
           perspective as we refine and expand the platform.
         </p>
-        <form className="mx-auto mt-10 max-w-xl" onSubmit={(e) => e.preventDefault()}>
+
+        {/* Plain HTML POST to Formspree */}
+        <form
+          action="https://formspree.io/f/xyzpaaqg"
+          method="POST"
+          className="mx-auto mt-10 max-w-xl"
+        >
+          <input type="hidden" name="source" value="join_us" />
+          <input type="hidden" name="_redirect" value="https://gcf.finance/?ok=1#contact" />
+          <input type="hidden" name="_subject" value="New Join Us submission (gcf.finance)" />
+          <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+
           <div className="flex flex-col gap-3 sm:flex-row">
             <input
               type="email"
+              name="email"
               placeholder="Your email"
               required
               className="w-full rounded-xl border border-sky-400 bg-white px-4 py-3 text-gray-900 placeholder-sky-400 focus:border-sky-500"
+              aria-label="Email address"
             />
             <button
               type="submit"
