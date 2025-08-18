@@ -54,9 +54,10 @@ function GlobalStyles() {
 
 function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur bg-white border-b border-gray-200">
+    <header className="sticky top-0 z-50 w-full backdrop-blur bg-white/90 border-b border-gray-200">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <a href="#home" className="group inline-flex items-center gap-3">
+          {/* Badge logo — keep/remove as you prefer */}
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">G</span>
           <span className="text-lg font-semibold tracking-tight text-gray-900">Global Cancer Fund</span>
         </a>
@@ -68,7 +69,12 @@ function SiteHeader() {
           <NavLink href="#whynow" label="Why now" />
           <NavLink href="#equity" label="Principles" />
           <NavLink href="#next" label="What’s next" />
-          <a href="#contact" className="rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow hover:bg-sky-600 transition">Get involved</a>
+          <a
+            href="#contact"
+            className="rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow hover:bg-sky-600 transition"
+          >
+            Get involved
+          </a>
         </nav>
       </div>
     </header>
@@ -77,20 +83,23 @@ function SiteHeader() {
 
 function NavLink({ href, label }: { href: string; label: string }) {
   return (
-    <a href={href} className="text-sm font-medium text-gray-700 hover:text-gray-900 hover:underline underline-offset-4">
+    <a
+      href={href}
+      className="text-sm font-medium text-gray-700 hover:text-gray-900 hover:underline underline-offset-4"
+    >
       {label}
     </a>
   );
 }
 
-/* ============================ ANNOUNCEMENT (static banner) ============================ */
+/* ============================ ANNOUNCEMENT ============================ */
 
 function Announcement() {
   return (
     <div className="bg-sky-100 border-b border-sky-200">
       <div className="mx-auto max-w-6xl px-6 py-4 text-lg text-sky-900 font-medium flex flex-wrap items-center justify-between gap-4">
         <span>
-          The <span className="font-bold">Global Cancer Fund</span> will be launched at an UN General Assembly side event on{" "}
+          The <span className="font-bold">Global Cancer Fund</span> will be launched at a UN General Assembly side event on{" "}
           <span className="font-bold">September 25, 2025</span>.
         </span>
         <a href="/unga-event" className="font-semibold text-sky-700 hover:underline whitespace-nowrap">
@@ -127,7 +136,7 @@ function SectionHeading({
 /* ========================== CARD STYLE SYSTEM ========================== */
 
 const cardLight = "rounded-2xl border border-gray-200 bg-white p-6 shadow-sm";
-const cardDark  = "rounded-2xl border border-white/20 bg-white/5 p-6";
+const cardDark = "rounded-2xl border border-white/20 bg-white/5 p-6";
 
 /* ================================ HERO ================================ */
 
@@ -143,7 +152,9 @@ function Hero() {
           <span className="block whitespace-nowrap text-3xl sm:text-4xl md:text-5xl">
             DESIGNING A GLOBAL CANCER FINANCING SYSTEM
           </span>
-          <span className="block whitespace-nowrap text-3xl sm:text-4xl md:text-5xl">SO THAT NO ONE IS LEFT BEHIND</span>
+          <span className="block whitespace-nowrap text-3xl sm:text-4xl md:text-5xl">
+            SO THAT NO ONE IS LEFT BEHIND
+          </span>
         </h1>
 
         <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-200">
@@ -175,7 +186,7 @@ function Solution() {
   );
 }
 
-/* =============================== PROBLEM (with embedded stats) =============================== */
+/* =============================== PROBLEM =============================== */
 
 function Problem() {
   return (
@@ -193,10 +204,10 @@ function Problem() {
 
       <div className="mt-12 max-w-5xl mx-auto px-6">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <NumberCard icon={<GlobeIcon />} stat="70+" label="Countries" desc="Cancer is the leading cause of premature death."/>
-          <NumberCard icon={<FundingIcon />} stat="<5%" label="Global health funding" desc="Reaches LMIC cancer care."/>
-          <NumberCard icon={<AlertIcon />} stat="~70%" label="Late-stage diagnosis" desc="In many LMIC settings."/>
-          <NumberCard icon={<HeartIcon />} stat=">80%" label="Survival" desc="When cancers are found early."/>
+          <NumberCard icon={<GlobeIcon />} stat="70+" label="Countries" desc="Cancer is the leading cause of premature death." />
+          <NumberCard icon={<FundingIcon />} stat="<5%" label="Global health funding" desc="Reaches LMIC cancer care." />
+          <NumberCard icon={<AlertIcon />} stat="~70%" label="Late-stage diagnosis" desc="In many LMIC settings." />
+          <NumberCard icon={<HeartIcon />} stat=">80%" label="Survival" desc="When cancers are found early." />
         </div>
       </div>
     </section>
@@ -215,7 +226,7 @@ function NumberCard({
   desc: string;
 }) {
   return (
-    <div className="h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm text-center">
+    <div className={cardLight + " h-full text-center"}>
       <div className="mx-auto inline-flex items-center justify-center rounded-xl border border-gray-200 bg-gray-50 p-3">
         {icon}
       </div>
@@ -274,10 +285,15 @@ function Innovation() {
           From proven solutions to transformative innovations
         </SectionHeading>
         <p className="text-lg leading-relaxed">
-          The Fund will invest in trusted interventions such as HPV vaccination and testing, community-based screening, diagnostics, and patient navigation. It will also accelerate next-generation tools including AI-assisted triage, portable imaging, interoperable data platforms, and self-collection technologies to move detection and care earlier in the continuum.
+          The Fund will invest in trusted interventions such as HPV vaccination and testing, community-based screening,
+          diagnostics, and patient navigation. It will also accelerate next-generation tools including AI-assisted
+          triage, portable imaging, interoperable data platforms, and self-collection technologies to move detection and
+          care earlier in the continuum.
         </p>
         <p className="mt-4 text-lg leading-relaxed">
-          By linking these investments directly to treatment access, the Fund ensures early detection leads to lifesaving care—not just diagnosis. The same systems and capabilities established for cervical cancer will adapt and scale to breast and other high-burden cancers.
+          By linking these investments directly to treatment access, the Fund ensures early detection leads to
+          lifesaving care—not just diagnosis. The same systems and capabilities established for cervical cancer will
+          adapt and scale to breast and other high-burden cancers.
         </p>
       </div>
     </section>
@@ -329,16 +345,12 @@ function WhyNow() {
   return (
     <section id="whynow" className="bg-gray-100 text-gray-900 py-20">
       <div className="max-w-5xl mx-auto px-6">
-        <SectionHeading kicker="Why now">
-          Seizing the moment for global cancer equity
-        </SectionHeading>
-
+        <SectionHeading kicker="Why now">Seizing the moment for global cancer equity</SectionHeading>
         <p className="text-lg leading-relaxed">
           For more than two decades, the global cancer community has called for a financing mechanism that matches the
           scale of the challenge. Yet progress has been constrained by a fragile and fragmented funding landscape,
           leaving countries without the tools to act decisively.
         </p>
-
         <p className="mt-4 text-lg leading-relaxed">
           The Global Cancer Fund is designed to turn this momentum into lasting systems change. By creating a
           country-led, transparent, and outcomes-focused platform, we can align resources, scale proven solutions, and
@@ -466,32 +478,17 @@ function WhatsNext() {
 
         <div className="relative pl-8 mt-6">
           <div className="pointer-events-none absolute left-0 inset-y-0 w-px bg-sky-500/80" />
-
-          <TimelineItem year="2025">
-            Establish governance, publish framework, and raise seed commitments.
-          </TimelineItem>
-          <TimelineItem year="2026">
-            Co-design 3–5 country investment notes; pilot transparency dashboard.
-          </TimelineItem>
-          <TimelineItem year="2027">
-            Expand to additional countries and scale blended capital mechanisms.
-          </TimelineItem>
-          <TimelineItem year="2030">
-            Mobilize $1B and demonstrate measurable stage-shift at national scale.
-          </TimelineItem>
+          <TimelineItem year="2025">Establish governance, publish framework, and raise seed commitments.</TimelineItem>
+          <TimelineItem year="2026">Co-design 3–5 country investment notes; pilot transparency dashboard.</TimelineItem>
+          <TimelineItem year="2027">Expand to additional countries and scale blended capital mechanisms.</TimelineItem>
+          <TimelineItem year="2030">Mobilize $1B and demonstrate measurable stage-shift at national scale.</TimelineItem>
         </div>
       </div>
     </section>
   );
 }
 
-function TimelineItem({
-  year,
-  children,
-}: {
-  year: string;
-  children: React.ReactNode;
-}) {
+function TimelineItem({ year, children }: { year: string; children: React.ReactNode }) {
   return (
     <div className="relative py-3">
       <span className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-sky-500 border-2 border-white" />
@@ -516,12 +513,8 @@ function JoinUs() {
           perspective as we refine and expand the platform.
         </p>
 
-        {/* Plain HTML POST to Formspree */}
-        <form
-          action="https://formspree.io/f/xyzpaaqg"
-          method="POST"
-          className="mx-auto mt-10 max-w-xl"
-        >
+        {/* Plain HTML POST to Formspree (change action if you use your own endpoint) */}
+        <form action="https://formspree.io/f/xyzpaaqg" method="POST" className="mx-auto mt-10 max-w-xl">
           <input type="hidden" name="source" value="join_us" />
           <input type="hidden" name="_redirect" value="https://gcf.finance/?ok=1#contact" />
           <input type="hidden" name="_subject" value="New Join Us submission (gcf.finance)" />
@@ -558,9 +551,7 @@ function SiteFooter() {
     <footer className="bg-gray-100 border-t border-gray-200">
       <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">
-            G
-          </span>
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">G</span>
           <span className="text-sm font-semibold text-gray-900">Global Cancer Fund</span>
         </div>
         <p className="text-sm text-gray-600">
