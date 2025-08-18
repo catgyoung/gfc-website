@@ -79,15 +79,15 @@ function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-6 py-20 text-center">
         <h1 className="mt-2 font-extrabold leading-tight tracking-tight">
-          <span className="block text-3xl sm:text-4xl md:text-5xl">UNGA Launch Event</span>
+          <span className="block text-3xl sm:text-4xl md:text-5xl">UN General Assembly Side Event</span>
           <span className="mt-1 block text-xl sm:text-2xl md:text-3xl text-sky-300">
-            Introducing the Global Cancer Fund
+            Introducing the Global Cancer Financing Platform
           </span>
         </h1>
 
         <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-200">
           Join government leaders, multilaterals, funders, clinicians, and innovators to help design a financing
-          platform that shifts cancer diagnosis from late to early stage—where survival is higher and treatment is more
+          platform that shifts cancer diagnosis from late to early stage - where survival is higher and treatment is more
           affordable.
         </p>
 
@@ -122,7 +122,7 @@ function EventDetails() {
       <div className="mx-auto max-w-5xl px-6">
         <h2 className="text-3xl font-bold">Event details</h2>
         <p className="mt-4 text-lg leading-relaxed">
-          This high-level convening will outline the Global Cancer Fund’s purpose, initial country engagement, and
+          This high-level convening will outline the Global Cancer Financing Platform's purpose, initial country engagement, and
           early investment pathways for stage shifting, including screening, diagnostics, navigation, and treatment
           linkages.
         </p>
@@ -135,7 +135,7 @@ function EventDetails() {
           </div>
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
             <div className="text-sm font-semibold text-sky-600">Where</div>
-            <div className="mt-1">New York, NY — UNGA side venue (details in confirmation)</div>
+            <div className="mt-1">New York, NY — (details in confirmation)</div>
           </div>
         </div>
 
@@ -160,9 +160,9 @@ function RsvpSection() {
   return (
     <section id="rsvp" className="bg-white text-gray-900 py-16">
       <div className="mx-auto max-w-5xl px-6">
-        <h2 className="text-3xl font-bold">RSVP / Request an invitation</h2>
+        <h2 className="text-3xl font-bold">Request an invitation</h2>
         <p className="mt-2 text-gray-600 max-w-2xl">
-          Space is limited. Please share your details below and we’ll follow up with confirmation and logistics.
+          Space is limited. Please indicate your interest in attending below.
         </p>
 
         <div className="mt-8">
@@ -248,9 +248,9 @@ function RsvpForm() {
           className="mt-1 w-full rounded-md border border-gray-300 bg-white p-2 focus:border-sky-500 focus:outline-none"
         >
           <option value="">Select one</option>
-          <option>Yes, I plan to attend in person</option>
-          <option>Interested—please keep me posted</option>
-          <option>Cannot attend—please share materials</option>
+          <option>Yes, I would like to attend in person</option>
+          <option>Interested - please keep me posted</option>
+          <option>Cannot attend - please share materials</option>
         </select>
       </div>
 
