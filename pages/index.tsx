@@ -59,7 +59,7 @@ function SiteHeader() {
         <a href="#home" className="group inline-flex items-center gap-3">
           {/* Badge logo — keep/remove as you prefer */}
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">G</span>
-          <span className="text-lg font-semibold tracking-tight text-gray-900">Global Cancer Fund</span>
+          <span className="text-lg font-semibold tracking-tight text-gray-900">Global Cancer Financing Platform</span>
         </a>
         <nav className="hidden gap-6 md:flex">
           <NavLink href="#solution" label="Vision" />
@@ -99,7 +99,7 @@ function Announcement() {
     <div className="bg-sky-100 border-b border-sky-200">
       <div className="mx-auto max-w-6xl px-6 py-4 text-lg text-sky-900 font-medium flex flex-wrap items-center justify-between gap-4">
         <span>
-          The <span className="font-bold">Global Cancer Fund</span> will be launched at a UN General Assembly side event on{" "}
+          The <span className="font-bold">Global Cancer Financing Platform</span> will be launched at a UN General Assembly side event on{" "}
           <span className="font-bold">September 25, 2025</span>.
         </span>
         <a href="/unga-event" className="font-semibold text-sky-700 hover:underline whitespace-nowrap">
@@ -158,7 +158,7 @@ function Hero() {
         </h1>
 
         <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-200">
-          We are launching the <span className="font-semibold">Global Cancer Fund</span> — a bold new platform to shift
+          We are launching the <span className="font-semibold">Global Cancer Financing Platform</span> — a bold new platform to shift
           cancer diagnosis from late to early stage, where survival is higher and treatment is more affordable.
         </p>
       </div>
@@ -178,7 +178,7 @@ function Solution() {
         <p className="text-lg leading-relaxed">
           Our focus is <span className="font-semibold text-sky-500">stage shifting</span>: moving more patients into
           early-stage diagnosis, when treatment is most effective and survival is highest. By starting with women’s
-          cancers, we prioritize areas of greatest inequity — while building an innovative financing platform designed
+          cancers, we prioritize areas of greatest inequity - while building an innovative financing platform designed
           for the future of global cancer care.
         </p>
       </div>
@@ -285,13 +285,13 @@ function Innovation() {
           From proven solutions to transformative innovations
         </SectionHeading>
         <p className="text-lg leading-relaxed">
-          The Fund will invest in trusted interventions such as HPV vaccination and testing, community-based screening,
+          The Platform will invest in trusted interventions such as HPV vaccination and testing, community-based screening,
           diagnostics, and patient navigation. It will also accelerate next-generation tools including AI-assisted
           triage, portable imaging, interoperable data platforms, and self-collection technologies to move detection and
           care earlier in the continuum.
         </p>
         <p className="mt-4 text-lg leading-relaxed">
-          By linking these investments directly to treatment access, the Fund ensures early detection leads to
+          By linking these investments directly to treatment access, the Platform ensures early detection leads to
           lifesaving care—not just diagnosis. The same systems and capabilities established for cervical cancer will
           adapt and scale to breast and other high-burden cancers.
         </p>
@@ -311,18 +311,18 @@ function HowItWorks() {
         </SectionHeading>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <InfoCard title="Country Plans">
-            National investment plans co-developed with Ministries of Health and aligned to NCCPs, with baselines and
+            National investment plans co-developed with governements and aligned to National Cancer Care Plans, with baselines and
             targets.
           </InfoCard>
           <InfoCard title="Capital Mix">
             Blended resources from domestic budgets, philanthropy, multilaterals, diaspora/remittances, and
             outcome-linked instruments.
           </InfoCard>
-          <InfoCard title="Results & Transparency">
+          <InfoCard title="Transparency">
             Disbursements tied to verified outcomes, with digital dashboards and open reporting on services and results.
           </InfoCard>
           <InfoCard title="Safeguards">
-            Independent technical review, audit, and grievance mechanisms to uphold quality and equity.
+            Independent technical review, audit, and governance strucgtures to uphold quality and equity.
           </InfoCard>
         </div>
       </div>
@@ -479,9 +479,9 @@ function WhatsNext() {
         <div className="relative pl-8 mt-6">
           <div className="pointer-events-none absolute left-0 inset-y-0 w-px bg-sky-500/80" />
           <TimelineItem year="2025">Establish governance, publish framework, and raise seed commitments.</TimelineItem>
-          <TimelineItem year="2026">Co-design 3–5 country investment notes; pilot transparency dashboard.</TimelineItem>
+          <TimelineItem year="2026">Co-design 5-7 country investment notes; pilot transparency dashboard.</TimelineItem>
           <TimelineItem year="2027">Expand to additional countries and scale blended capital mechanisms.</TimelineItem>
-          <TimelineItem year="2030">Mobilize $1B and demonstrate measurable stage-shift at national scale.</TimelineItem>
+          <TimelineItem year="2030">Mobilize at least $1B and demonstrate measurable stage-shift at national scale.</TimelineItem>
         </div>
       </div>
     </section>
@@ -555,7 +555,7 @@ function SiteFooter() {
           <span className="text-sm font-semibold text-gray-900">Global Cancer Fund</span>
         </div>
         <p className="text-sm text-gray-600">
-          © {year} Global Cancer Fund. Early-phase platform launch — we welcome your input as we build.
+          © {year} Global Cancer Financing Platform. Early-phase platform launch - we welcome your input as we build.
         </p>
       </div>
     </footer>

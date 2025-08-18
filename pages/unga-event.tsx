@@ -79,14 +79,14 @@ function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-6 py-20 text-center">
         <h1 className="mt-2 font-extrabold leading-tight tracking-tight">
-          <span className="block text-3xl sm:text-4xl md:text-5xl">UN GENERAL ASSEMBLY: Side Event</span>
+          <span className="block text-3xl sm:text-4xl md:text-5xl">UN GENERAL ASSEMBLY SIDE EVENT</span>
           <span className="mt-1 block text-xl sm:text-2xl md:text-3xl text-sky-300">
             Introducing the Global Cancer Financing Platform
           </span>
         </h1>
 
         <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-200">
-          Join government leaders, multilaterals, funders, clinicians, and innovators to help design a financing
+          Join government leaders,funders, clinicians, innovators, advocates and patients, to help design a financing
           platform that shifts cancer diagnosis from late to early stage - where survival is higher and treatment is more
           affordable.
         </p>
