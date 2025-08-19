@@ -59,7 +59,7 @@ function SiteHeader() {
         <a href="#home" className="group inline-flex items-center gap-3">
           {/* Badge logo — keep/remove as you prefer */}
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">G</span>
-          <span className="text-lg font-semibold tracking-tight text-gray-900">Global Cancer Financing Platform</span>
+          <span className="text-lg font-semibold tracking-tight text-gray-900">GCF</span>
         </a>
         <nav className="hidden gap-6 md:flex">
           <NavLink href="#solution" label="Vision" />
@@ -99,7 +99,7 @@ function Announcement() {
     <div className="bg-sky-100 border-b border-sky-200">
       <div className="mx-auto max-w-6xl px-6 py-4 text-lg text-sky-900 font-medium flex flex-wrap items-center justify-between gap-4">
         <span>
-          The <span className="font-bold">Global Cancer Financing Platform</span> will be launched at a UN General Assembly side event on{" "}
+          The <span className="font-bold">Global Cancer Financing Platform</span> will launch at a UN General Assembly side event {" "}
           <span className="font-bold">September 25, 2025</span>.
         </span>
         <a href="/unga-event" className="font-semibold text-sky-700 hover:underline whitespace-nowrap">
@@ -552,7 +552,7 @@ function SiteFooter() {
       <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">G</span>
-          <span className="text-sm font-semibold text-gray-900">Global Cancer Fund</span>
+          <span className="text-sm font-semibold text-gray-900">GCF</span>
         </div>
         <p className="text-sm text-gray-600">
           © {year} Global Cancer Financing Platform. Early-phase platform launch - we welcome your input as we build.

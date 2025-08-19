@@ -53,7 +53,7 @@ function PageHeader() {
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">
             G
           </span>
-          <span className="text-lg font-semibold tracking-tight text-gray-900">Global Cancer Fund</span>
+          <span className="text-lg font-semibold tracking-tight text-gray-900">GCF</span>
         </a>
         <nav className="hidden gap-6 md:flex">
           <a
@@ -86,7 +86,7 @@ function Hero() {
         </h1>
 
         <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-200">
-          Join government leaders,funders, clinicians, innovators, advocates and patients, to help design a financing
+          Join government leaders, funders, clinicians, innovators, advocates and patients, to help design a financing
           platform that shifts cancer diagnosis from late to early stage - where survival is higher and treatment is more
           affordable.
         </p>
@@ -304,7 +304,7 @@ function PageFooter() {
       <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">G</span>
-          <span className="text-sm font-semibold text-gray-900">Global Cancer Fund</span>
+          <span className="text-sm font-semibold text-gray-900">GCF</span>
         </div>
         <p className="text-sm text-gray-600">
           © {year} Global Cancer Fund. UNGA side event.
