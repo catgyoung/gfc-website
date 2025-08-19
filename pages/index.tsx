@@ -162,16 +162,17 @@ function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-6 py-24 text-center">
         <h1 className="mt-5 font-extrabold leading-tight tracking-tight">
-          <span className="block whitespace-nowrap text-3xl sm:text-4xl md:text-5xl">
+          {/* Wrap on mobile; keep single line on md+ if it fits */}
+          <span className="block text-3xl sm:text-4xl md:text-5xl md:whitespace-nowrap">
             DESIGNING A GLOBAL CANCER FINANCING SYSTEM
           </span>
-          <span className="block whitespace-nowrap text-3xl sm:text-4xl md:text-5xl">
+          <span className="block text-3xl sm:text-4xl md:text-5xl md:whitespace-nowrap">
             SO THAT NO ONE IS LEFT BEHIND
           </span>
         </h1>
 
-        <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-200">
-          We are launching the <span className="font-semibold">Global Cancer Financing Platform</span> — a bold new platform to shift
+        <p className="mt-6 mx-auto max-w-3xl text-lg text-gray-200">
+          We are launching the <span className="font-semibold">Global Cancer Fund</span> — a bold new platform to shift
           cancer diagnosis from late to early stage, where survival is higher and treatment is more affordable.
         </p>
       </div>
@@ -206,7 +207,7 @@ function Problem() {
     <section id="problem" className="bg-gradient-to-b from-[#0a1a2f] to-[#1f2937] text-white py-20">
       <div className="max-w-5xl mx-auto px-6">
         <SectionHeading kicker="Why this matters" light>
-          The cancer burden is shifting—financing hasn’t
+          The cancer burden is shifting - financing hasn’t
         </SectionHeading>
         <p className="text-lg leading-relaxed text-gray-200">
           Cancer is now a leading cause of premature death in over 70 countries. Yet less than 5% of global health
@@ -324,8 +325,7 @@ function HowItWorks() {
         </SectionHeading>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <InfoCard title="Country Plans">
-            National investment plans co-developed with governements and aligned to National Cancer Care Plans, with baselines and
-            targets.
+            National investment plans co-developed with governements and aligned to National Cancer Care Plans.
           </InfoCard>
           <InfoCard title="Capital Mix">
             Blended resources from domestic budgets, philanthropy, multilaterals, diaspora/remittances, and
@@ -365,7 +365,7 @@ function WhyNow() {
           leaving countries without the tools to act decisively.
         </p>
         <p className="mt-4 text-lg leading-relaxed">
-          The Global Cancer Fund is designed to turn this momentum into lasting systems change. By creating a
+          The Global Cancer Financing Platform is designed to turn this momentum into lasting systems change. By creating a
           country-led, transparent, and outcomes-focused platform, we can align resources, scale proven solutions, and
           accelerate innovation. Now is the time to build a financing model that not only delivers immediate impact, but
           also lays the foundation for sustainable cancer control worldwide.
@@ -393,7 +393,7 @@ function Principles() {
           />
           <PrincipleCard
             icon={<FlagIcon />}
-            title="Country Ownership"
+            title="Ownership"
             desc="Solutions must be aligned with national strategies, institutions, and health priorities."
           />
           <PrincipleCard
@@ -408,7 +408,7 @@ function Principles() {
           />
           <PrincipleCard
             icon={<SparkIcon />}
-            title="Catalytic Impact"
+            title="Impact"
             desc="The Fund should unlock co-investment, drive policy change, and create systems-level shifts—not just fund projects."
           />
         </div>
@@ -490,7 +490,6 @@ function WhatsNext() {
         <SectionHeading kicker="What’s next">Early milestones</SectionHeading>
 
         <div className="relative pl-8 mt-6">
-          <div className="pointer-events-none absolute left-0 inset-y-0 w-px bg-sky-500/80" />
           <TimelineItem year="2025">Establish governance, publish framework, and raise seed commitments.</TimelineItem>
           <TimelineItem year="2026">Co-design 5-7 country investment notes; pilot transparency dashboard.</TimelineItem>
           <TimelineItem year="2027">Expand to additional countries and scale blended capital mechanisms.</TimelineItem>
