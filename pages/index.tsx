@@ -50,24 +50,21 @@ function GlobalStyles() {
   );
 }
 
-
-/* ============================== HEADER (centered nav) ============================== */
-
-/* ============================== HEADER (perfectly centered nav) ============================== */
+/* ============================== HEADER (centered, single-line nav) ============================== */
 
 function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/90 backdrop-blur">
-      <div className="relative mx-auto max-w-6xl px-6">
-        {/* Row height fixed; items vertically centered */}
+      <div className="relative mx-auto max-w-7xl px-6">
+        {/* Fixed-height row keeps left/right aligned */}
         <div className="h-14 flex items-center justify-between">
-          {/* Left: logo */}
+          {/* Left: logo/name */}
           <a href="#home" className="inline-flex items-center gap-3">
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">
               G
             </span>
             <span className="text-lg font-semibold tracking-tight text-gray-900">
-              Global Cancer Fund
+              GCF
             </span>
           </a>
 
@@ -80,9 +77,9 @@ function SiteHeader() {
           </a>
         </div>
 
-        {/* Center: section links (absolutely centered, independent of left/right widths) */}
-        <nav className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:flex">
-          <div className="pointer-events-auto flex items-center gap-6">
+        {/* Center: nav — absolutely centered and prevented from wrapping */}
+        <nav className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block">
+          <div className="pointer-events-auto flex items-center gap-5 whitespace-nowrap text-[14px]">
             <NavLink href="#solution" label="Vision" />
             <NavLink href="#problem" label="Why this matters" />
             <NavLink href="#innovation" label="What we’re funding" />
