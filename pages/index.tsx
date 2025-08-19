@@ -52,16 +52,22 @@ function GlobalStyles() {
 
 /* ============================== HEADER ============================== */
 
+/* ============================== HEADER (centered nav) ============================== */
+
 function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur bg-white/90 border-b border-gray-200">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <a href="#home" className="group inline-flex items-center gap-3">
-          {/* Badge logo — keep/remove as you prefer */}
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">G</span>
-          <span className="text-lg font-semibold tracking-tight text-gray-900">GCF</span>
+      <div className="mx-auto max-w-6xl px-6 py-3 grid grid-cols-[auto,1fr,auto] items-center">
+        {/* Left: logo */}
+        <a href="#home" className="group inline-flex items-center gap-3 justify-self-start">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">
+            G
+          </span>
+          <span className="text-lg font-semibold tracking-tight text-gray-900">Global Cancer Fund</span>
         </a>
-        <nav className="hidden gap-6 md:flex">
+
+        {/* Center: section links (perfectly centered) */}
+        <nav className="hidden md:flex justify-center gap-6">
           <NavLink href="#solution" label="Vision" />
           <NavLink href="#problem" label="Why this matters" />
           <NavLink href="#innovation" label="What we’re funding" />
@@ -69,13 +75,17 @@ function SiteHeader() {
           <NavLink href="#whynow" label="Why now" />
           <NavLink href="#equity" label="Principles" />
           <NavLink href="#next" label="What’s next" />
+        </nav>
+
+        {/* Right: CTA */}
+        <div className="justify-self-end hidden md:block">
           <a
             href="#contact"
             className="rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow hover:bg-sky-600 transition"
           >
             Get involved
           </a>
-        </nav>
+        </div>
       </div>
     </header>
   );
