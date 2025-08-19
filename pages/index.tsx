@@ -63,7 +63,7 @@ function SiteHeader() {
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">
             G
           </span>
-          <span className="text-lg font-semibold tracking-tight text-gray-900">Global Cancer Fund</span>
+          <span className="text-lg font-semibold tracking-tight text-gray-900">GCF</span>
         </a>
 
         {/* Center: section links (perfectly centered) */}
@@ -109,8 +109,8 @@ function Announcement() {
     <div className="bg-sky-100 border-b border-sky-200">
       <div className="mx-auto max-w-6xl px-6 py-4 text-lg text-sky-900 font-medium flex flex-wrap items-center justify-between gap-4">
         <span>
-          The <span className="font-bold">Global Cancer Financing Platform</span> will launch at a UN General Assembly side event {" "}
-          <span className="font-bold">September 25, 2025</span>.
+          The <span className="font-bold">Global Cancer Financing Platform</span> will launch on September 25, 2025 {" "}
+          <span className="font-bold"></span>.
         </span>
         <a href="/unga-event" className="font-semibold text-sky-700 hover:underline whitespace-nowrap">
           View event details →
