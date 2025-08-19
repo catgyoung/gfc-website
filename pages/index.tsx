@@ -172,8 +172,8 @@ function Hero() {
         </h1>
 
         <p className="mt-6 mx-auto max-w-3xl text-lg text-gray-200">
-          We are launching the <span className="font-semibold">Global Cancer Fund</span> — a bold new platform to shift
-          cancer diagnosis from late to early stage, where survival is higher and treatment is more affordable.
+          We are launching the <span className="font-semibold">Global Cancer Financing Platform</span> — a bold new platform to mobilize at least <span className="font-semibold whitespace-nowrap">$1Billion by 2030</span> to shift cancer diagnosis
+  from late to early stage, where survival is higher and treatment is more affordable.
         </p>
       </div>
     </section>
@@ -489,25 +489,53 @@ function WhatsNext() {
       <div className="max-w-5xl mx-auto px-6">
         <SectionHeading kicker="What’s next">Early milestones</SectionHeading>
 
-        <div className="relative pl-8 mt-6">
-          <TimelineItem year="2025">Establish governance, publish framework, and raise seed commitments.</TimelineItem>
-          <TimelineItem year="2026">Co-design 5-7 country investment notes; pilot transparency dashboard.</TimelineItem>
-          <TimelineItem year="2027">Expand to additional countries and scale blended capital mechanisms.</TimelineItem>
-          <TimelineItem year="2030">Mobilize at least $1B and demonstrate measurable stage-shift at national scale.</TimelineItem>
+        <div className="relative mt-6">
+          {/* Vertical line (full height of the list) */}
+          <span
+            aria-hidden="true"
+            className="absolute inset-y-0 left-3 sm:left-4 w-px bg-sky-500/80"
+          />
+
+          <ol className="space-y-3">
+            <TimelineItem year="2025">
+              Establish governance, publish framework, and raise seed commitments.
+            </TimelineItem>
+            <TimelineItem year="2026">
+              Co-design 3–5 country investment notes; pilot transparency dashboard.
+            </TimelineItem>
+            <TimelineItem year="2027">
+              Expand to additional countries and scale blended capital mechanisms.
+            </TimelineItem>
+            <TimelineItem year="2030">
+              Mobilize $1B and demonstrate measurable stage-shift at national scale.
+            </TimelineItem>
+          </ol>
         </div>
       </div>
     </section>
   );
 }
 
-function TimelineItem({ year, children }: { year: string; children: React.ReactNode }) {
+
+function TimelineItem({
+  year,
+  children,
+}: {
+  year: string;
+  children: React.ReactNode;
+}) {
   return (
-    <div className="relative py-3">
-      <span className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-sky-500 border-2 border-white" />
-      <p className="ml-8">
+    // Padding leaves room for the dot while text stays clear of the line
+    <li className="relative pl-8 sm:pl-10 py-3">
+      {/* Dot: centered on the line position at left-3 / sm:left-4 */}
+      <span
+        aria-hidden="true"
+        className="absolute left-3 sm:left-4 top-1/2 -translate-x-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-sky-500 ring-2 ring-white"
+      />
+      <p className="text-base">
         <span className="font-semibold text-sky-500">{year}:</span> {children}
       </p>
-    </div>
+    </li>
   );
 }
 
