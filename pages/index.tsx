@@ -50,42 +50,48 @@ function GlobalStyles() {
   );
 }
 
-/* ============================== HEADER ============================== */
 
 /* ============================== HEADER (centered nav) ============================== */
 
+/* ============================== HEADER (perfectly centered nav) ============================== */
+
 function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur bg-white/90 border-b border-gray-200">
-      <div className="mx-auto max-w-6xl px-6 py-3 grid grid-cols-[auto,1fr,auto] items-center">
-        {/* Left: logo */}
-        <a href="#home" className="group inline-flex items-center gap-3 justify-self-start">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">
-            G
-          </span>
-          <span className="text-lg font-semibold tracking-tight text-gray-900">GCF</span>
-        </a>
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/90 backdrop-blur">
+      <div className="relative mx-auto max-w-6xl px-6">
+        {/* Row height fixed; items vertically centered */}
+        <div className="h-14 flex items-center justify-between">
+          {/* Left: logo */}
+          <a href="#home" className="inline-flex items-center gap-3">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-sky-500 text-white font-bold">
+              G
+            </span>
+            <span className="text-lg font-semibold tracking-tight text-gray-900">
+              Global Cancer Fund
+            </span>
+          </a>
 
-        {/* Center: section links (perfectly centered) */}
-        <nav className="hidden md:flex justify-center gap-6">
-          <NavLink href="#solution" label="Vision" />
-          <NavLink href="#problem" label="Why this matters" />
-          <NavLink href="#innovation" label="What we’re funding" />
-          <NavLink href="#how" label="How it works" />
-          <NavLink href="#whynow" label="Why now" />
-          <NavLink href="#equity" label="Principles" />
-          <NavLink href="#next" label="What’s next" />
-        </nav>
-
-        {/* Right: CTA */}
-        <div className="justify-self-end hidden md:block">
+          {/* Right: CTA */}
           <a
             href="#contact"
-            className="rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow hover:bg-sky-600 transition"
+            className="hidden md:inline-flex items-center justify-center rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow hover:bg-sky-600 transition"
           >
             Get involved
           </a>
         </div>
+
+        {/* Center: section links (absolutely centered, independent of left/right widths) */}
+        <nav className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:flex">
+          <div className="pointer-events-auto flex items-center gap-6">
+            <NavLink href="#solution" label="Vision" />
+            <NavLink href="#problem" label="Why this matters" />
+            <NavLink href="#innovation" label="What we’re funding" />
+            <NavLink href="#how" label="How it works" />
+            <NavLink href="#whynow" label="Why now" />
+            <NavLink href="#equity" label="Principles" />
+            <NavLink href="#next" label="What’s next" />
+          </div>
+        </nav>
       </div>
     </header>
   );
