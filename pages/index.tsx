@@ -192,7 +192,7 @@ function Solution() {
         <p className="text-lg leading-relaxed">
           Our focus is <span className="font-semibold text-sky-500">stage shifting</span>: moving more patients into
           early-stage diagnosis, when treatment is most effective and survival is highest. By starting with women’s
-          cancers, we prioritize areas of greatest inequity - while building an innovative financing platform designed
+          cancers, we will prioritize areas of greatest inequity - while building an innovative financing platform designed
           for the future of global cancer care.
         </p>
       </div>
@@ -211,7 +211,7 @@ function Problem() {
         </SectionHeading>
         <p className="text-lg leading-relaxed text-gray-200">
           Cancer is now a leading cause of premature death in over 70 countries. Yet less than 5% of global health
-          financing reaches LMICs, where cases are rising fastest. Too often, cancers are detected late, when survival
+          financing reaches low-and-middle income countries, where cases are rising fastest. Too often, cancers are detected late, when survival
           is low and costs are high. We believe a new financing model can change that trajectory.
         </p>
       </div>
@@ -335,7 +335,7 @@ function HowItWorks() {
             Disbursements tied to verified outcomes, with digital dashboards and open reporting on services and results.
           </InfoCard>
           <InfoCard title="Safeguards">
-            Independent technical review, audit, and governance strucgtures to uphold quality and equity.
+            Independent technical review, audit, and governance structures to uphold quality and equity.
           </InfoCard>
         </div>
       </div>
