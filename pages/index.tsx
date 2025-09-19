@@ -87,6 +87,7 @@ function SiteHeader() {
             <NavLink href="#whynow" label="Why now" />
             <NavLink href="#equity" label="Principles" />
             <NavLink href="#next" label="What’s next" />
+            <NavLink href="/faq" label="FAQ" /> {/* NEW */}
           </div>
         </nav>
       </div>
@@ -112,7 +113,7 @@ function Announcement() {
     <div className="bg-sky-100 border-b border-sky-200">
       <div className="mx-auto max-w-6xl px-6 py-4 text-lg text-sky-900 font-medium flex flex-wrap items-center justify-between gap-4">
         <span>
-          The <span className="font-bold">Global Cancer Financing Platform</span> will launch on September 25, 2025 {" "}
+          The <span className="font-bold">Global Cancer Financing Platform</span> will launch on September 25, 2025{" "}
           <span className="font-bold"></span>.
         </span>
         <a href="/unga-event" className="font-semibold text-sky-700 hover:underline whitespace-nowrap">
@@ -172,7 +173,7 @@ function Hero() {
         </h1>
 
         <p className="mt-6 mx-auto max-w-3xl text-lg text-gray-200">
-          We are launching the <span className="font-semibold">Global Cancer Financing Platform</span> — a bold new platform to mobilize at least <span className="font-semibold whitespace-nowrap">$1Billion by 2030</span> to shift cancer diagnosis
+          We are launching the <span className="font-semibold">Global Cancer Financing Platform</span> — a bold new platform to mobilize at least <span className="font-semibold whitespace-nowrap">$1 billion by 2030</span> to shift cancer diagnosis
   from late to early stage, where survival is higher and treatment is more affordable.
         </p>
       </div>
@@ -192,7 +193,7 @@ function Solution() {
         <p className="text-lg leading-relaxed">
           Our focus is <span className="font-semibold text-sky-500">stage shifting</span>: moving more patients into
           early-stage diagnosis, when treatment is most effective and survival is highest. By starting with women’s
-          cancers, we will prioritize areas of greatest inequity - while building an innovative financing platform designed
+          cancers, we will prioritize areas of greatest inequity while building an innovative financing platform designed
           for the future of global cancer care.
         </p>
       </div>
@@ -211,7 +212,7 @@ function Problem() {
         </SectionHeading>
         <p className="text-lg leading-relaxed text-gray-200">
           Cancer is now a leading cause of premature death in over 70 countries. Yet less than 5% of global health
-          financing reaches low-and-middle income countries, where cases are rising fastest. Too often, cancers are detected late, when survival
+          financing reaches low- and middle-income countries, where cases are rising fastest. Too often, cancers are detected late, when survival
           is low and costs are high. We believe a new financing model can change that trajectory.
         </p>
       </div>
@@ -300,7 +301,7 @@ function Innovation() {
         </SectionHeading>
         <p className="text-lg leading-relaxed">
           The Platform will invest in trusted interventions such as HPV vaccination and testing, community-based screening,
-          diagnostics, and patient navigation. It will also accelerate next-generation tools including AI-assisted
+          diagnostics, and patient navigation. It will also accelerate next-generation tools, including AI-assisted
           triage, portable imaging, interoperable data platforms, and self-collection technologies to move detection and
           care earlier in the continuum.
         </p>
@@ -399,7 +400,7 @@ function Principles() {
           <PrincipleCard
             icon={<LeafIcon />}
             title="Sustainability"
-            desc="The Fund must strengthen long-term capacity, not create parallel systems or one-off interventions."
+            desc="The Platform must strengthen long-term capacity, not create parallel systems or one-off interventions."
           />
           <PrincipleCard
             icon={<LayersIcon />}
@@ -501,7 +502,7 @@ function WhatsNext() {
               Establish governance, publish framework, and raise seed commitments.
             </TimelineItem>
             <TimelineItem year="2026">
-              Co-design 3–5 country investment notes; pilot transparency dashboard.
+              Co-design 3 to 5 country investment notes; pilot transparency dashboard.
             </TimelineItem>
             <TimelineItem year="2027">
               Expand to additional countries and scale blended capital mechanisms.
@@ -515,7 +516,6 @@ function WhatsNext() {
     </section>
   );
 }
-
 
 function TimelineItem({
   year,
@@ -546,7 +546,7 @@ function JoinUs() {
     <section id="contact" className="bg-gradient-to-b from-[#0a1a2f] to-[#1f2937] text-white py-20 text-center">
       <div className="max-w-4xl mx-auto px-6">
         <SectionHeading kicker="Join us" light>
-          Help shape the Global Cancer Fund
+          Help shape the Global Cancer Financing Platform
         </SectionHeading>
         <p className="text-xl leading-relaxed text-gray-200">
           This is the beginning. We invite governments, funders, clinicians, advocates, and innovators to add their
